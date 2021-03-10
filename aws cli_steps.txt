@@ -1,0 +1,21 @@
+- Add new user in IAM with name as serverless-admin(eg) . Provide Admin Access
+- Get the access key and secret key
+
+  access key: <>
+  secret key: <>
+  DEFAULT REGION : us-east-1
+
+- Add these keys and default region to Windows ENV variables. Names should be AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
+and AWS_DEFAULT_REGION
+- Install AWS CLI
+
+- CLI Commands
+
+ > aws help 
+ > aws lambda help
+ > aws sts get-caller-identity  > Will show our serverless admin created using IAM
+
+- Create the lambda function locally (check subfolders)
+- Zip the entire module , create the new function and instead of using code editor, use the upload code option and add the zip folder.
+
+
