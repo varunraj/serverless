@@ -49,7 +49,7 @@ exports.handler = async (event, context) => {
     let { lang, ...info } = event.queryStringParameters; //info is optional 
 
 
-    let message = `${greetings[lang] ? greetings[lang] : greetings[en]} ${name}`
+    let message = `${greetings[lang] ? greetings[lang] : greetings['en']} ${name}`
 
     let response = {
         message,

@@ -15,7 +15,15 @@ and AWS_DEFAULT_REGION
  > aws lambda help
  > aws sts get-caller-identity  > Will show our serverless admin created using IAM
 
+// Deploy using aws console:
+
 - Create the lambda function locally (check subfolders)
 - Zip the entire module , create the new function and instead of using code editor, use the upload code option and add the zip folder.
 
-
+// Deploy using aws cli:
+- zip the contents of lambda function folder.
+> aws s3 cp resize-images.zip s3://varun-images/resize-images.zip
+  - aws s3 cp <sourceFile> s3://bucketname/filename 
+> aws lambda update-function-code --function-name resizeImage --s3-bucket varun-images --s3-key resize-images.zip --publish
+  - function resizeImages is already created with s3 full policy using console.
+  - we are updating the function using the code zip file in s3.
