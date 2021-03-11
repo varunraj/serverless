@@ -21,6 +21,7 @@ and AWS_DEFAULT_REGION
 - Zip the entire module , create the new function and instead of using code editor, use the upload code option and add the zip folder.
 
 // Deploy using aws cli:
+
 - zip the contents of lambda function folder.
 > aws s3 cp resize-images.zip s3://varun-images/resize-images.zip
   - aws s3 cp <sourceFile> s3://bucketname/filename 

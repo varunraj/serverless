@@ -46,7 +46,7 @@ exports.handler = async (event, context) => {
     let name = event.pathParameters.name // we can find the structureof event using the test event from api-proxy 
 
     // get lang from query param
-    let { lang, ...info } = event.queryStringParameters; //info is optional 
+    let { lang, ...info } = event.queryStringParameters || {}; //info is optional. OR part is to set empty object is query param is empty 
 
 
     let message = `${greetings[lang] ? greetings[lang] : greetings['en']} ${name}`
