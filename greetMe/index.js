@@ -57,9 +57,13 @@ exports.handler = async (event, context) => {
         timeStamp: moment().unix()
     }
 
-    // return a proper http response 
+    // return a proper http response. We will use lambda proxy for the api using this function. So we need to set all http response details inside function itself.
+
     return {
         statusCode: 200,
+        headers: {
+            "Access-Control-Allow-Origin": "*" // for CORS. We can also set this from console.
+        },
         body: JSON.stringify(response)
     }
 
