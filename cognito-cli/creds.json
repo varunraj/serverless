@@ -1,0 +1,9 @@
+{
+    "UserPoolId": "YOUR_COGNITO_USER_POOL_ID_GOES_HERE",
+    "ClientId": "YOUR_COGNITO_APP_CLIENT_ID_GOES_HERE",
+    "AuthFlow": "ADMIN_NO_SRP_AUTH",
+    "AuthParameters": {
+        "USERNAME": "username_of_the_user_signing_in",
+        "PASSWORD": "password_of_the_user_signing_in"
+    }
+}
