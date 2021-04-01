@@ -31,7 +31,7 @@ Resources:
           Properties:
             Path: /user/{userid}
             Method: get
-      CodeUri: s3://varunraj-sam/6a22034951ea215d5a258d8888d16246
+      CodeUri: s3://varunraj-sam/28c0d8c28ec9887380d08969fc7fb5f9
   PostUser:
     Type: AWS::Serverless::Function
     Properties:
@@ -43,7 +43,7 @@ Resources:
           Properties:
             Path: /user/{userid}
             Method: put
-      CodeUri: s3://varunraj-sam/6a22034951ea215d5a258d8888d16246
+      CodeUri: s3://varunraj-sam/28c0d8c28ec9887380d08969fc7fb5f9
   DeleteUser:
     Type: AWS::Serverless::Function
     Properties:
@@ -55,4 +55,4 @@ Resources:
           Properties:
             Path: /user/{userid}
             Method: delete
-      CodeUri: s3://varunraj-sam/6a22034951ea215d5a258d8888d16246
+      CodeUri: s3://varunraj-sam/28c0d8c28ec9887380d08969fc7fb5f9
